@@ -1,13 +1,210 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: burlywood;
+  font-family: monospace;
+}
+
+.content .container {
+  width: 80%;
+  margin: auto;
+}
+
+@media (max-width: 37.5em) {
+  .content .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 50em) {
+  .content .container {
+    width: 90%;
+  }
+}
+
+.content .container .search-bar {
+  margin-top: 3rem;
+  border-radius: .5rem;
+  background-color: #222;
+}
+
+.content .container .search-bar__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+.content .container .search-bar__container .input {
+  width: 80%;
+}
+
+.content .container .search-bar__container .input input {
+  background: transparent;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: monospace;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+@media (max-width: 37.5em) {
+  .content .container .search-bar__container .input input {
+    font-size: .8rem;
+    margin-left: .5rem;
+  }
+}
+
+@media (max-width: 50em) {
+  .content .container .search-bar__container .input input {
+    margin-left: 1rem;
+  }
+}
+
+.content .container .search-bar__container .input input::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+.content .container .search-bar__container .input input:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+.content .container .search-bar__container .input input::-ms-input-placeholder {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+.content .container .search-bar__container .input input::placeholder {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+.content .container .search-bar__container .search-btn .btn {
+  background-color: crimson;
+  border: none;
+  padding: .7rem 2rem;
+  font-size: 1.2rem;
+  font-family: inherit;
+  color: #fff;
+  border-radius: .5rem;
+  cursor: pointer;
+  -webkit-transition: ease .3s;
+  transition: ease .3s;
+}
+
+@media (max-width: 37.5em) {
+  .content .container .search-bar__container .search-btn .btn {
+    padding: .7rem .7rem;
+    font-size: 1rem;
+  }
+}
+
+.content .container .search-bar__container .search-btn .btn:hover {
+  background-color: #8357a8;
+}
+
+/*
+@Juan Santos
+HIDDEN PROP FOR THE DETAIL FIELD
+*/
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.label {
+  color: crimson;
+}
+
+/*end of utils*/
+
+.detail-field {
+  width: 80%;
+  height: auto;
+  margin: 3rem auto;
+  border-radius: .5rem;
+  background-color: #222;
+  color: #fff;
+}
+
+@media (max-width: 37.5em) {
+  .detail-field {
+    width: 90%;
+  }
+}
+
+@media (max-width: 50em) {
+  .detail-field {
+    width: 90%;
+  }
+}
+
+.detail-field__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 3rem;
+}
+
+@media (max-width: 37.5em) {
+  .detail-field__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1.3rem;
+  }
+}
+
+@media (max-width: 50em) {
+  .detail-field__container {
+    padding: 1.5rem;
+  }
+}
+
+.detail-field__image img {
+  margin-right: 2rem;
+  width: 13rem;
+  height: 13rem;
+  overflow: hidden;
+}
+
+@media (max-width: 37.5em) {
+  .detail-field__image img {
+    margin: 0 auto;
+    width: 7rem;
+    height: 7rem;
+  }
+}
+
+.detail-field__info__name {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.error {
+  background-color: crimson;
 }
