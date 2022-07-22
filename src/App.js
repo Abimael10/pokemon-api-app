@@ -44,7 +44,7 @@ function App() {
     const fetchPokemonData = async () => {
 
       try {
-        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}/`);
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
 
         if(response.ok) {
           const data = await response.json();
@@ -83,6 +83,8 @@ function App() {
   useEffect(() => {
     if(pokemon.name !== '' && error) {
       setError(false);
+    } else if(pokemon.name === '' && !error) {
+      setError(true)
     }
   }, [pokemon.name]);
 
